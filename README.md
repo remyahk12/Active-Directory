@@ -25,22 +25,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azure Domain Controller & Client Deployment</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; }
-        code { background: #f4f4f4; padding: 5px; border-radius: 5px; }
-        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto; }
-        h1, h2, h3 { color: #333; }
-        .section { margin-bottom: 20px; }
-        ul { margin-top: 0; }
-    </style>
-</head>
-<body>
+
 
     <h1>🚀 Azure Domain Controller & Client Deployment</h1>
     <p>This guide provides step-by-step instructions to deploy a <b>Windows Server 2022</b> as a Domain Controller (DC) and a <b>Windows 10</b> Client VM in Microsoft Azure.</p>
