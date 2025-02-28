@@ -24,11 +24,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Windows 10 (21H2)
 
 <h2>High-Level Deployment and Configuration Steps</h2>
-
-
-
-    <h1>🚀 Azure Domain Controller & Client Deployment</h1>
-    <p>This guide provides step-by-step instructions to deploy a <b>Windows Server 2022</b> as a Domain Controller (DC) and a <b>Windows 10</b> Client VM in Microsoft Azure.</p>
+ <h1>🚀 Azure Domain Controller & Client Deployment</h1
+<p>This guide provides step-by-step instructions to deploy a <b>Windows Server 2022</b> as a Domain Controller (DC) and a <b>Windows 10</b> Client VM in Microsoft Azure.</p>
 
     <div class="section">
         <h2>📌 Overview</h2>
