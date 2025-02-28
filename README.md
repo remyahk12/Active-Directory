@@ -60,7 +60,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h3>4️⃣ Assign Static Private IP to DC-1</h3>
 <p>
-<img src="(https://github.com/user-attachments/assets/7c15be03-da43-4dda-9088-59e67058afe9)" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/7c15be03-da43-4dda-9088-59e67058afe9" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
  <h3>5️⃣ Disable Windows Firewall on DC-1 (For Testing)</h3>
