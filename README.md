@@ -103,118 +103,20 @@ User jane_admin as your admin account.</p></h2>
 <p>
 <img src="https://github.com/user-attachments/assets/6a86f731-f993-4f30-bf34-035268dcb987" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
+<h1>
+ Join Client-1 to your domain (mydomain.com)</h1>
+<h2>Login to Client-1 as the original local admin (labuser) and join it to the domain
+ <p>
+<img src="https://github.com/user-attachments/assets/33daccb3-ae3b-48e9-b706-0433c1c7932a" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+ </p>
+</h2>
 
-<h2>📌 Overview</h2>
-<ul>
- <li>Create an <b>Azure Resource Group</b></li>
- <li>Set up a <b>Virtual Network and Subnet</b></li>
- <li>Deploy a <b>Windows Server 2022 VM</b> as a Domain Controller</li>
- <li>Deploy a <b>Windows 10 VM</b> as a Client</li>
- <li>Configure DNS settings for Client-1 to use DC-1</li>
- <li>Verify network connectivity between the VMs</li>
- </ul>
- 
-
-   
- <h2>🛠 Prerequisites</h2>
- <ul>
- <li>An <b>active Azure subscription</b></li>
- <li><b>Azure CLI</b> or <b>Azure PowerShell</b> installed</li>
- <li><b>RDP client</b> for remote access</li>
- </ul>
-  <div class="section">
-  <h2>🔧 Deployment Steps</h2>
-
-  <h3>1️⃣ Create a Resource Group</h3>
-  <pre><code>az group create --name RG-DomainController --location eastus</code></pre>
-
-  <h3>2️⃣ Create a Virtual Network and Subnet</h3>
-  <pre><code>az network vnet create --name VNet-DC --resource-group RG-DomainController --location eastus --address-prefix 10.0.0.0/16 --subnet-name Subnet-DC --subnet-prefix 10.0.0.0/24</code></pre>
-
- <h3>3️⃣ Deploy the Domain Controller VM</h3>
-  <pre><code>az vm create --resource-group RG-DomainController --name DC-1 --image Win2022Datacenter --size Standard_D2s_v3 --admin-username labuser --admin-password "Cyberlab123!" --vnet-name VNet-DC --subnet Subnet-DC --nsg "" --public-ip-address ""</code></pre>
-
-<h3>4️⃣ Assign Static Private IP to DC-1</h3>
+<h3>
+ <p>
+  Login to the Domain Controller and verify Client-1 shows up in ADUC
 <p>
-<img src="https://github.com/user-attachments/assets/7c15be03-da43-4dda-9088-59e67058afe9" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+ <img src="https://github.com/user-attachments/assets/6a86f731-f993-4f30-bf34-035268dcb987" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-
- <h3>5️⃣ Disable Windows Firewall on DC-1 (For Testing)</h3>
- <p>After connecting to the VM via <b>RDP</b>, open <b>PowerShell as Administrator</b> and run:</p>
- <pre><code>Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False</code></pre>
- </div>
-
-<div class="section">
-<h2>💻 Deploy Client-1 VM</h2>
-
- <h3>6️⃣ Deploy Windows 10 VM (Client-1)</h3>
-<pre><code>az vm create --resource-group RG-DomainController --name Client-1 --image Win10 --size Standard_B2ms --admin-username labuser --admin-password "Cyberlab123!" --vnet-name VNet-DC --subnet Subnet-DC --nsg "" --public-ip-address ""</code></pre>
-
- <h3>7️⃣ Configure Client-1 DNS Settings to DC-1</h3>
- <pre><code>
-$nicClient = (az network nic list --resource-group RG-DomainController --query "[?contains(name,'client-1')].name" --output tsv)
-az network nic update --resource-group RG-DomainController --name $nicClient --dns-servers 10.0.0.4
-        </code></pre>
-
- <h3>8️⃣ Restart Client-1 from Azure Portal</h3>
- <p>After updating DNS settings, restart the VM to apply changes.</p>
-
- <h3>9️⃣ Verify Network Connectivity</h3>
- <ul>
-  <li>Log in to Client-1 via RDP</li>
-  <li>Open **Command Prompt** and run:</li>
-  </ul>
-  <pre><code>ping 10.0.0.4</code></pre>
- <p>✅ <b>Ensure the ping succeeds</b></p>
-
- <h3>🔟 Verify DNS Configuration on Client-1</h3>
-  <ul>
-  <li>Open **PowerShell** on Client-1 and run:</li>
-        </ul>
-        <pre><code>ipconfig /all</code></pre>
-        <p>✅ The output should show **DC-1's private IP (10.0.0.4) as the DNS server**</p>
-    </div>
- <div class="section">
-        <h2>📂 Project Structure</h2>
-        <pre>
-
-    </div>
-
- <div class="section">
- <h2>🚀 Next Steps</h2>
-  <ul>
-  <li>Install <b>Active Directory Domain Services (AD DS)</b> on DC-1</li>
-  <li>Promote DC-1 as a <b>Domain Controller</b></li>
-  <li>Join Client-1 to the <b>Active Directory Domain</b></li>
-  <li>Configure <b>Group Policies</b> and user authentication</li>
-  </ul>
-  </div>
-
-
-
-
-<h2>Deployment and Configuration Steps</h2>
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+ </p>
+</h3>
