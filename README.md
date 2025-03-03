@@ -233,3 +233,33 @@ On Client-1, navigate to the shared folder (start, run, \\dc-1)
 </p>
 </h3>
 
+<h2>
+ <p>
+ Create an “ACCOUNTANTS” Security Group, assign permissions, an test access
+In DC-1, in Active Directory, create a security group called “ACCOUNTANTS”</p></h2>
+<p>
+<img src="https://github.com/user-attachments/assets/08dfb4c1-d355-4e8c-b570-6a680f045303" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<h2><p>
+In the dc-1 On the “accounting” folder created earlier, set the following permissions:
+Folder: “accounting”, Group: “ACCOUNTANTS”, Permissions: “Read/Write”
+</p></h2>
+<p>
+<img src="https://github.com/user-attachments/assets/ef4d5f87-9f01-4ca1-8e6e-b1b415d39a25 " height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<h2>
+ <p>
+On Client-1, as  <someuser>, try to access the accountants folder. It should fail.</p> </h2>
+ <p>
+<img src="https://github.com/user-attachments/assets/f9b831c6-f977-4979-91dc-2a3be04e566e" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+ Log out of Client-1 as  <someuser>
+ <h2><p> On DC-1, make <someuser> a member of the “ACCOUNTANTS”  Security Group   </p></h2>
+ <p>
+<img src="https://github.com/user-attachments/assets/63c683c0-36e2-49ae-8f1e-3f2e751712a0" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+ <h2><p>Sign back into Client-1 as <someuser> and try to access the “accounting” share </p></h2>
+<p>
+<img src="https://github.com/user-attachments/assets/0e4a9ee6-10da-43bf-9206-cbeecd1da051" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p> 
+
