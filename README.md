@@ -1,4 +1,4 @@
- configure-ad
+ 
 <p align="center">
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
@@ -132,7 +132,7 @@ User jane_admin as your admin account.</p></h2>
 </p>
 
 <h2>
- Open poweshell in  DC-1 and run this script  src=" https://github.com/remyahk12/Active-Directory/blob/main/employeecreate "
+ Open poweshell in  DC-1 and run this script (https://github.com/remyahk12/Active-Directory/commit/b618767d95a60cec67b69e5dada893751bdd1667)
  <p>Create a bunch of additional users </p>
 </h2>
 <p>
