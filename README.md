@@ -208,28 +208,28 @@ Folder: “no-access”, Group: “Domain Admins”, “Permissions: “Read/Wri
 <h2>
  Attempt to access file shares as a normal user
 On Client-1, navigate to the shared folder (start, run, \\dc-1)
-<h2>Try to access the folders just created. 
- <p>
+<h2>Try to access the folders just created. </h2>
+ <h3><p>
   Step1:Accessing readaccess folder allows the user to open the file and read  but no write permission
  </p>
 <p>
 <img src="https://github.com/user-attachments/assets/76c2a677-0630-4ed2-bf5d-5099b67c85e3" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-</h2>
- 
+</h3>
+ <h3>
  <p>
  step2: Accessing writeaccess folder allows the user to open the file and read and write permission
  </p>
 <p>
 <img src="https://github.com/user-attachments/assets/c9c734ec-e036-43bf-8603-714895d5deae" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-</h2>
-
+</h3>
+<h3>
  <p>
   Accessing noaccess folder deny the user  permission
  </p>
 <p>
 <img src="https://github.com/user-attachments/assets/08dfb4c1-d355-4e8c-b570-6a680f045303" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-</h2>
+</h3>
 
