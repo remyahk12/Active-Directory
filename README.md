@@ -120,3 +120,19 @@ User jane_admin as your admin account.</p></h2>
 </p>
  </p>
 </h3>
+<h1>
+
+ Setup Remote Desktop for non-administrative users on Client-1
+
+</h1>
+<h2>
+ <p> Login to client -1 and add the domain users on to to remote desktop access</p>
+ <p>
+ <img src="https://github.com/user-attachments/assets/7d52fedf-7247-4fbe-bb06-7232d23e2fe1" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+ <h1>
+  <p>Create a bunch of additional users and attempt to log into client-1 with one of the users
+</p>
+ </h1>
+</h2>
