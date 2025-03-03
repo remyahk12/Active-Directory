@@ -116,7 +116,7 @@ User jane_admin as your admin account.</p></h2>
  <p>
   Login to the Domain Controller and verify Client-1 shows up in ADUC
 <p>
- <img src="https://github.com/user-attachments/assets/6a86f731-f993-4f30-bf34-035268dcb987" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+ <img src="https://github.com/user-attachments/assets/1c819790-2d0b-4b72-a44b-21293f75bf0b" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
  </p>
 </h3>
