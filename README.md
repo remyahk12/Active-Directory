@@ -131,8 +131,22 @@ User jane_admin as your admin account.</p></h2>
  <img src="https://github.com/user-attachments/assets/7d52fedf-7247-4fbe-bb06-7232d23e2fe1" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
- <h1>
-  <p>Create a bunch of additional users and attempt to log into client-1 with one of the users
+<h2>
+ Open poweshell in  DC-1 and run this script  src=" https://github.com/remyahk12/Active-Directory/blob/main/employeecreate "
+ <p>Create a bunch of additional users </p>
+</h2>
+<p>
+ <img src="https://github.com/user-attachments/assets/ec0744fc-288d-4012-81bc-aee649a21933" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
- </h1>
+ <h2>
+  <p>Attempt to log into client-1 with one of the users
+</p>
+ </h2>
+ <p>
+ <img src="https://github.com/user-attachments/assets/8dea33cc-d9fb-47be-a3de-d000f4f1677d" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+ <img src="https://github.com/user-attachments/assets/8d5c4597-3318-472e-ae54-f4ac62b8c937" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+ 
 </h2>
