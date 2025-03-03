@@ -172,9 +172,64 @@ Observe that the account has been locked out within Active Directory
 <p>
  <img src="https://github.com/user-attachments/assets/46eef94f-892b-49f8-8cd8-c22186a63958" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-Unlock the account
-Reset the password
-Attempt to login with it
+Unlock the account:Go to dc-1 .Find the account gog.kub .Under account information ,check the unlock account.This will unlock the account and can try login again.
+<p>
+ <img src="https://github.com/user-attachments/assets/b2664011-43ee-4a00-875e-e7d8774860f5" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<h2>
+ User can now successfully login with the correct password
+<p>
+ <img src="https://github.com/user-attachments/assets/a8c48dee-2ea6-4e6e-b2f1-c60d4fbd96c2" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
 
- </p>
 </h2>
+<h1>
+ <p>Network File Share and Permission</p>
+</h1>
+<h2>
+Step1 : Create some sample file shares with various permissions
+Connect/log into DC-1 as your domain admin account (mydomain.com\remyahk)
+Connect/log into Client-1 as a normal user (mydomain\<someuser>)
+On DC-1, on the C:\ drive, create 4 folders: “read-access”, “write-access”, “no-access”, “accounting”
+Set the following permissions (share the folder)
+Folder: “read-access”, Group: “Domain Users”, Permission: “Read”
+Folder: “write-access”,  Group: “Domain Users”, Permissions: “Read/Write”
+Folder: “no-access”, Group: “Domain Admins”, “Permissions: “Read/Write”
+</h2>
+<p>
+<img src="https://github.com/user-attachments/assets/e7406274-9f18-4f56-8ccb-20b108327e68" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<img src="https://github.com/user-attachments/assets/5aec0c84-889f-49ec-9acc-db69868a4425" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<img src="https://github.com/user-attachments/assets/e64bbb37-8701-42ab-972b-922c2a78ade9" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<h2>
+ Attempt to access file shares as a normal user
+On Client-1, navigate to the shared folder (start, run, \\dc-1)
+<h2>Try to access the folders just created. 
+ <p>
+  Step1:Accessing readaccess folder allows the user to open the file and read  but no write permission
+ </p>
+<p>
+<img src="https://github.com/user-attachments/assets/76c2a677-0630-4ed2-bf5d-5099b67c85e3" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+</h2>
+ 
+ <p>
+ step2: Accessing writeaccess folder allows the user to open the file and read and write permission
+ </p>
+<p>
+<img src="https://github.com/user-attachments/assets/c9c734ec-e036-43bf-8603-714895d5deae" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+</h2>
+
+ <p>
+  Accessing noaccess folder deny the user  permission
+ </p>
+<p>
+<img src="https://github.com/user-attachments/assets/08dfb4c1-d355-4e8c-b570-6a680f045303" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+</h2>
+
