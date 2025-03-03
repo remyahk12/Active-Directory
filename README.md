@@ -132,7 +132,7 @@ User jane_admin as your admin account.</p></h2>
 </p>
 
 <h2>
- Open poweshell in  DC-1 and run this script 
+ Open poweshell in  DC-1 and run this script employeecreate
  <p>Create a bunch of additional users </p>
 </h2>
 <p>
