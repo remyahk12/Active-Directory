@@ -238,7 +238,7 @@ On Client-1, navigate to the shared folder (start, run, \\dc-1)
  Create an “ACCOUNTANTS” Security Group, assign permissions, an test access
 In DC-1, in Active Directory, create a security group called “ACCOUNTANTS”</p></h2>
 <p>
-<img src="https://github.com/user-attachments/assets/08dfb4c1-d355-4e8c-b570-6a680f045303" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/f5c3c703-7f14-4eb5-9fdb-948f3a644ea0" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <h2><p>
 In the dc-1 On the “accounting” folder created earlier, set the following permissions:
