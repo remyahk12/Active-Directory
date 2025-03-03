@@ -251,7 +251,7 @@ Folder: “accounting”, Group: “ACCOUNTANTS”, Permissions: “Read/Write�
  <p>
 On Client-1, as  <someuser>, try to access the accountants folder. It should fail.</p> </h2>
  <p>
-<img src="https://github.com/user-attachments/assets/f9b831c6-f977-4979-91dc-2a3be04e566e" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/c5e0c432-ad56-4b05-9dd3-246dedc4ecce" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
  Log out of Client-1 as  <someuser>
  <h2><p> On DC-1, make <someuser> a member of the “ACCOUNTANTS”  Security Group   </p></h2>
