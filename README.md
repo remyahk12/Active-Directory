@@ -83,11 +83,26 @@ The output for the DNS settings should show DC-1’s private IP Address
 <img src="https://github.com/user-attachments/assets/c78e4202-eb43-484a-8042-d15ca5eebce8" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 </p>
+<h1>
+ Create a Domain Admin user within the domain</h1>
+<h2><p> In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES”
+Create a new OU named “_ADMINS”
+Create a new employee named “Remya hk”  with the username of “remyahk”
+In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES”
+Create a new OU named “_ADMINS”
+Add remyahk to the “Domain Admins” Security Group
+Log out / close the connection to DC-1 and log back in as “mydomain.com\remyahk”
+User jane_admin as your admin account.</p></h2>
+<p>
+<img src="https://github.com/user-attachments/assets/44444b9b-9861-4aa6-9c2c-db36f6b540d7" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<img src="https://github.com/user-attachments/assets/75b793e8-a555-4b4b-92b6-e1658099b5bf" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
 
-
-
-
-
+<p>
+<img src="https://github.com/user-attachments/assets/6a86f731-f993-4f30-bf34-035268dcb987" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
 
 <h2>📌 Overview</h2>
 <ul>
