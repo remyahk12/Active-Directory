@@ -4,12 +4,10 @@
 </p>
 
 <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+This project outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
 
-<h2>Video Demonstration</h2>
 
-- ### [YouTube: How to Deploy on-premises Active Directory within Azure Compute](https://www.youtube.com)
 
 <h2>Environments and Technologies Used</h2>
 
@@ -24,10 +22,45 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Windows 10 (21H2)
 
 <h2>High-Level Deployment and Configuration Steps</h2>
-<h1>🚀 Azure Domain Controller & Client Deployment</h1
-<p>This guide provides step-by-step instructions to deploy a <b>Windows Server 2022</b> as a Domain Controller (DC) and a <b>Windows 10</b> Client VM in Microsoft Azure.</p>
+<p>
+ Create a virtual machine ,which is running as a windows server.This server will act as a Domain Controller.we will have other vm which run as a client.the client will join the dc.the users in the dc can login to the client.the dc and the client have a virtual nic and ip address.usually the dns client is connected to the azure dns server automatically.inorder for the client to join the dc , we need to ask the client to use the domain controller dns server.So dns ip address of the client is customized to dc ip address(set to static)
+</p>
+<p>
+<img src="https://github.com/user-attachments/assets/66b9f35d-ee58-4551-a3f2-47a4e04fc713" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>Step 1:Setup Domain Controller in Azure
+Create a Resource Group.Create a Virtual Network and Subnet
+Create the Domain Controller VM (Windows Server 2022) named “DC-1”
+After VM is created, set Domain Controller’s NIC Private IP address to be static
+Log into the VM and disable the Windows Firewall (for testing connectivity)
+</p>
+<p>
+<img src="https://github.com/user-attachments/assets/80a52d2c-a440-419a-9e58-fcb256491505" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>Step 2: Setup Client-1 in Azure
+Create the Client VM (Windows 10) named “Client-1”
+Attach it to the same region and Virtual Network as DC-1
+After VM is created, set Client-1’s DNS settings to DC-1’s Private IP address</p>
+<p>
+<img src="https://github.com/user-attachments/assets/24f2735b-dbf0-404e-9fef-70d93e4d238e" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+ Step3: Log into the VM(server-dc-1) and disable the Windows Firewall (for testing connectivity)
 
-    
+</p>
+<p>
+<img src="https://github.com/user-attachments/assets/ce042411-f2d4-45ec-845b-140d8490ac78" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Step 5 : Login to Client-1
+Attempt to ping DC-1’s private IP address
+Ensure the ping succeeded
+From Client-1, open PowerShell and run ipconfig /all
+The output for the DNS settings should show DC-1’s private IP Address
+</p>
+<p>
+<img src="https://github.com/user-attachments/assets/b7d84a38-be31-4100-ae9a-304202884bcd" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
 <h2>📌 Overview</h2>
 <ul>
  <li>Create an <b>Azure Resource Group</b></li>
