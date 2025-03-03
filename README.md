@@ -150,3 +150,31 @@ User jane_admin as your admin account.</p></h2>
 </p>
  
 </h2>
+<h1>
+ <p>
+  Configuring Group Policy
+ </p>
+</h1>
+<h2>
+ <p>
+<h3>Dealing with Account Lockouts</h3>
+Get logged into dc-1
+Configure Group Policy to Lockout the account after 5 attempts:
+ <p>
+ <img src="https://github.com/user-attachments/assets/d2888503-2d09-4e11-85e9-40e258bea689" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+Pick a random user account created previously.(user account:gog.kub)
+
+
+Attempt to log in with it 6 times with a bad password
+
+Observe that the account has been locked out within Active Directory
+<p>
+ <img src="https://github.com/user-attachments/assets/46eef94f-892b-49f8-8cd8-c22186a63958" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+Unlock the account
+Reset the password
+Attempt to login with it
+
+ </p>
+</h2>
