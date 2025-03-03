@@ -52,9 +52,13 @@ After VM is created, set Client-1’s DNS settings to DC-1’s Private IP addres
 <img src="https://github.com/user-attachments/assets/ce042411-f2d4-45ec-845b-140d8490ac78" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Step 5 : Login to Client-1
+Step 4: Login to Client-1
 Attempt to ping DC-1’s private IP address
 Ensure the ping succeeded
+<p>
+<img src="https://github.com/user-attachments/assets/623f3bbb-2799-4861-9068-1095807166e8" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
 From Client-1, open PowerShell and run ipconfig /all
 The output for the DNS settings should show DC-1’s private IP Address
 </p>
