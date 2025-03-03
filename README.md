@@ -65,6 +65,30 @@ The output for the DNS settings should show DC-1’s private IP Address
 <p>
 <img src="https://github.com/user-attachments/assets/b7d84a38-be31-4100-ae9a-304202884bcd" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
+<h1>
+ <p>Deploying Active Directory</p>
+</h1>
+<h2>
+ Step1 :Login to DC-1 and install Active Directory Domain Services
+</h2>
+<p>
+<img src="https://github.com/user-attachments/assets/53205597-0100-4354-a7d1-b64de6c1269d" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+<img src="https://github.com/user-attachments/assets/782b1f61-863a-4a32-adb7-dd24e65fbb5d" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+<p>Promote as a DC: Setup a new forest as mydomain.com
+ <p>
+<img src="https://github.com/user-attachments/assets/c78e4202-eb43-484a-8042-d15ca5eebce8" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+</p>
+
+
+
+
+
+
 <h2>📌 Overview</h2>
 <ul>
  <li>Create an <b>Azure Resource Group</b></li>
